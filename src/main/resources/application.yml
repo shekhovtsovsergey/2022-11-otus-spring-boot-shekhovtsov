@@ -1,0 +1,11 @@
+spring:
+  messages:
+    basename: i18n/examination
+
+application:
+  locale: en
+
+exam:
+  ticket:
+    resourceName: /questions_${application.locale}.csv
+    correct: 3
