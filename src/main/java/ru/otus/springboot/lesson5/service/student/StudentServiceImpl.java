@@ -14,7 +14,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public Student getStudent() {
-        ioService.outputString("Hello, please, enter your first name:");
+        ioService.printLocalizedString("examination.hello");
         String firstName = ioService.inputString();
         return new Student(firstName);
     }

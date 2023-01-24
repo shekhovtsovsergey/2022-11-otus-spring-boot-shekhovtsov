@@ -3,7 +3,7 @@ spring:
     basename: i18n/examination
 
 application:
-  locale: en
+  locale: ru_ru
 
 exam:
   ticket:

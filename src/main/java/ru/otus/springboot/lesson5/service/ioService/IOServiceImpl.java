@@ -6,6 +6,7 @@ import ru.otus.springboot.lesson5.service.local.LocalizeService;
 
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 @Service
@@ -35,19 +36,17 @@ public class IOServiceImpl implements IOService {
     }
 
 
+    @Override
+    public void printLocalizedString(String code, Object... args) {
+        this.outputString(localizeService.localized(code, args));
+    }
+
     private Scanner getScanner() {
         if (scanner == null) {
             scanner = new Scanner(inputStream);
         }
         return scanner;
     }
-
-
-    @Override
-    public void printLocalizedString(String code, Object... args) {
-        this.outputString(localizeService.localized(code, args));
-    }
-
 
 
 }
